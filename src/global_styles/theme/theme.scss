@@ -1,17 +1,21 @@
-@use '@angular/material' as mat;
-@import "material-icons/iconfont/material-icons.css";
+@use "@angular/material" as mat;
+@use "@fontsource/roboto" as rob;
+@use "@fontsource/work-sans";
+@use "./palettes" as pal;
 
 @include mat.core();
 
 $light-theme: mat.define-light-theme(
   (
     color: (
-      primary: mat.define-palette(mat.$blue-palette),
-      accent: mat.define-palette(mat.$pink-palette),
+      primary: mat.define-palette(pal.$blue),
+      accent: mat.define-palette(pal.$blue),
       warn: mat.define-palette(mat.$red-palette),
     ),
-    typography: mat.define-typography-config(),
-    density: 0,
+    typography:
+      mat.define-typography-config(
+        $font-family: "Work Sans",
+      ),
   )
 );
 
@@ -21,26 +25,16 @@ $dark-theme: mat.define-dark-theme(
       primary: mat.define-palette(mat.$purple-palette),
       accent: mat.define-palette(mat.$blue-grey-palette),
     ),
-    typography: mat.define-typography-config(),
-    density: 0,
+    typography:
+      mat.define-typography-config(
+        $font-family: "Work Sans",
+      ),
   )
 );
-
-
 
 .light-theme {
   @include mat.all-component-themes($light-theme);
 }
 .dark-theme {
   @include mat.all-component-themes($dark-theme);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-a {
-  text-decoration: none;
-  color: black;
 }

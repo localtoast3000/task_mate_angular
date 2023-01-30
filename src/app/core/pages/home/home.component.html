@@ -1,0 +1,5 @@
+<app-dashboard-layout>
+  <section class="tasks" *ngFor="let task of tasks; let i = index">
+    <app-task-card [bottomMargin]="i < tasks.length - 1 ?  '15px' :  '0px'" [task]="task"/>
+  </section>
+</app-dashboard-layout>
