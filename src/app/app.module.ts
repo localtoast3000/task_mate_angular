@@ -7,6 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { LogoComponent } from './shared/components/logo/logo.component';
 import { ToolbarComponent } from './core/components/toolbar/toolbar.component';
 import { ThemeSwitchComponent } from './shared/components/theme-switch/theme-switch.component';
+import { SystemThemeDirective } from './shared/components/theme-switch/system-theme.directive';
+import { StoreModule, Store } from '@ngrx/store';
+import { darkModeReducer } from './core/components/toolbar/toolbar.reducer';
+import { TesterComponent } from './core/components/tester/tester.component'
 
 @NgModule({
   imports: [
@@ -14,13 +18,18 @@ import { ThemeSwitchComponent } from './shared/components/theme-switch/theme-swi
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
+    StoreModule.forRoot({darkMode: darkModeReducer}),
   ],
   declarations: [
     AppComponent,
     LogoComponent,
     ToolbarComponent,
     ThemeSwitchComponent,
+    SystemThemeDirective,
+    TesterComponent,
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  
+}

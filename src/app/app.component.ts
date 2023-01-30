@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'task_mate';
+  darkMode:any
+
+  constructor(private store: Store<{darkMode: boolean}>){
+    this.darkMode = store.select('darkMode')
+    console.log(this.darkMode)
+  }
+  
 }
+
