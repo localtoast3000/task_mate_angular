@@ -1,0 +1,34 @@
+Route = {
+    date-access: {
+    "Data providing interfaces"
+    - State managment interfaces such as store accessor
+    - Services for providing data
+    - Any interface that accesses and provides data relating to the module
+    }
+    feature: {
+        "Smart components"
+        - Complex Logic
+        - Dependency Injection
+        - Setting up Streams
+        - Other controller type behaviour
+        - "Knows" things about the apps structure 
+
+        Features are the sub routes of a main route, if main is "/home" then feature is "/home/feature"
+        }
+    ui: {
+        "Presentational components"
+        - Doesn't "know" anything about the app
+        - Comminicates primarily with @Input and @Output
+        - Primarily concerned with displaying/interacting, not complex logic/DI
+        }, 
+    utils: {
+        Any helper functionality
+    }
+}
+...Routes
+
+Shared = {
+    data-access: {}
+    ui: {}
+    utils:{}
+}
