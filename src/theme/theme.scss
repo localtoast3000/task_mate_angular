@@ -1,6 +1,6 @@
 @use "@angular/material" as mat;
 @use "@fontsource/roboto" as rob;
-@use "@fontsource/work-sans";
+@use "@fontsource/work-sans" as wos;
 @use "./palettes" as pal;
 
 @include mat.core();
