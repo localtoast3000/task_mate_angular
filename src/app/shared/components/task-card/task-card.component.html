@@ -1,4 +1,21 @@
 <article class="task-card" [ngStyle]="{ marginBottom: bottomMargin }">
-  <p class="description">{{ task?.description }}</p>
-  <p class="completion-date">{{ task?.completion_date }}</p>
+  <div class="identifier">
+    <p>
+      {{ task?.description?.split("")?.[0]?.toUpperCase()}}
+    </p>
+  </div>
+  <div class="right-section">
+    <div class="details">
+      <p class="header">
+        Task: <span class="value">{{ task?.description }}</span>
+      </p>
+      <p class="header">
+        Ends: <span class="value">{{ task?.completion_date }}</span>
+      </p>
+    </div>
+    <div class="options">
+      <button mat-icon-button class="icon-btn"><app-pencil-icon color="blue" [scale]="0.8"/></button>
+      <button mat-icon-button class="icon-btn"><app-bin-icon color="red" [scale]="1"/></button>
+    </div>
+  </div>
 </article>

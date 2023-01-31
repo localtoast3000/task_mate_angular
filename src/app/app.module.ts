@@ -15,6 +15,8 @@ import { NewtaskComponent } from './core/pages/newtask/newtask.component';
 import { DashboardComponent } from './shared/layouts/dashboard/dashboard.component';
 import { AuthenticationComponent } from './shared/layouts/authentication/authentication.component';
 import { TaskCardComponent } from './shared/components/task-card/task-card.component';
+import { BinComponent } from './shared/icons/bin/bin.component';
+import { PencilComponent } from './shared/icons/pencil/pencil.component';
 
 @NgModule({
   imports: [
@@ -36,6 +38,8 @@ import { TaskCardComponent } from './shared/components/task-card/task-card.compo
     DashboardComponent,
     AuthenticationComponent,
     TaskCardComponent,
+    BinComponent,
+    PencilComponent,
   ],
   bootstrap: [AppComponent],
 })
