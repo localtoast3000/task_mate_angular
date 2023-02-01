@@ -3,8 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
-import { AppComponent } from './app.component';
-import { Components } from './import-groups/index';
+import { AppComponents } from './imports/index';
 
 @NgModule({
   imports: [
@@ -13,7 +12,7 @@ import { Components } from './import-groups/index';
     MaterialModule,
     AppRoutingModule,
   ],
-  declarations: [AppComponent, ...Components],
-  bootstrap: [AppComponent],
+  declarations: AppComponents,
+  bootstrap: [AppComponents[0]],
 })
 export class AppModule {}

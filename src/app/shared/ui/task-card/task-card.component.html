@@ -14,8 +14,16 @@
       </p>
     </div>
     <div class="options">
-      <button mat-icon-button class="icon-btn" (click)="editClicked(task?.id)"><app-pencil-icon color="blue" [scale]="0.8"/></button>
-      <button mat-icon-button class="icon-btn"(click)="deleteClicked(task?.id)"><app-bin-icon color="red" [scale]="1"/></button>
+      <button mat-icon-button class="icon-btn" (click)="editClicked(task?.id)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        class="icon-btn"
+        (click)="deleteClicked(task?.id)"
+      >
+        <mat-icon [ngStyle]="{ color: 'red' }">close</mat-icon>
+      </button>
     </div>
   </div>
 </article>
